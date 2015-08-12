@@ -1,0 +1,249 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AfterLogin.master.cs" Inherits="AfterLogin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- BEGIN HEAD-->
+<head runat="server">
+
+    <meta charset="UTF-8" />
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+
+    <!--[if IE]>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <![endif]-->
+    <!-- GLOBAL STYLES -->
+    <!-- GLOBAL STYLES -->
+    <!-- BOOTSTRAP STYLES-->
+    <%--<link href="Assets_After_Login/css/bootstrap.css" rel="stylesheet" />--%>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/metisMenu.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.css" rel="stylesheet" />
+
+    <!-- FONTAWESOME STYLES-->
+    <%--<link href="Assets_After_Login/css/font-awesome.css" rel="stylesheet" />--%>
+    <link href="Content/css/font-awesome.css" rel="stylesheet" />
+    <!-- CUSTOM STYLES-->
+    <link href="Assets_After_Login/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+    <!--END GLOBAL STYLES -->
+
+    <%--JQUERY UI--%>
+    <link href="Content/themes/base/datepicker.css" rel="stylesheet" />
+    <!-- PAGE LEVEL STYLES -->
+    <!-- END PAGE LEVEL  STYLES -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <script src="Scripts/jquery-2.1.3.js"></script>
+    <script src="Scripts/jquery-ui-1.11.4.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+
+</head>
+<!-- END  HEAD-->
+<body>
+    <form id="form1" runat="server" role="form" class="form-horizontal" method="post">
+        <div id="wrapper">
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="adjust-nav">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" style="color: white" href="#"><i class="fa fa-square-o "></i>&nbsp;STOCKER</a>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right">
+
+                            <li>
+                                <button class="btn btn-link btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <i class="fa fa-user fa-3x"></i>
+
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a id="menuUpdateDetails" runat="server" href="">Update Your Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="Change_Password.aspx">Change Password</a>
+                                    </li>
+                                    <li>
+                                        <asp:LinkButton ID="lbLogOut" runat="server" CausesValidation="false" OnClick="lbLogOut_Click">Log Out</asp:LinkButton>
+
+                                    </li>
+                                </ul>
+                            </li>
+
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /. NAV TOP  -->
+            <nav class="navbar-default navbar-side" role="navigation">
+                <div class="sidebar-collapse">
+                    <ul class="nav" id="main-menu">
+                        <li class="text-center user-image-back">
+                            <img runat="server" id="imgProfilePic" src="Assets_After_Login/img/find_user.png" class="img-responsive text-center center-block" />
+                            <h3>Welcome!!!</h3>
+                            <h4>
+                                <asp:Label runat="server" ID="lblUsername" Text=""></asp:Label></h4>
+                        </li>
+
+
+                        <li>
+                            <a id="hlDashboard" runat="server" href="">Dashboard</a>
+                        </li>
+                        <li id="menuSearch" runat="server">
+                            <a href="#">Search & View<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Shareholder_Information_Form.aspx?search=1">Shareholder Information</a>
+
+                                    <%--<asp:LinkButton ID="lbShareholderSearch" runat="server" OnClick="lbShareholderSearch_Click">Shareholder Information</asp:LinkButton>--%>
+                                </li>
+                                <li>
+                                    <a href="Company_Information_Form.aspx?search=1">Company Information</a>
+                                    <%--<asp:LinkButton ID="lbCompanySearch" runat="server" OnClick="lbCompanySearch_Click">Company Information</asp:LinkButton>--%>
+                                </li>
+                                <li id="menuUserSearch" runat="server">
+                                    <a href="User_Information_Form.aspx?Search=1">User Informtion</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menuDocGen" runat="server">
+                            <a href="#">Documents<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li id="menuShareCertificate" runat="server">
+                                    <a href="Share_Certificate_Generation_Form.aspx">Share Certificate Generation</a>
+                                </li>
+                                <li id="menuShareholderStatement" runat="server">
+                                    <a href="Shareholder_Statement_Form.aspx">Shareholder Statement</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="menuReportGen" runat="server">
+                            <a href="#">Reports<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li id="menuDailyTransactionVolume" runat="server">
+                                    <a href="Crv_Daily_Transaction_Volume.aspx">Daily Transactions Volume</a>
+                                </li>
+
+                                <li>
+                                    <a href="ShareholdingPattern_Form.aspx">Shareholding Pattern</a>
+                                </li>
+
+                                <li>
+                                    <a href="Company_Stock_History_Form.aspx">Company History</a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li id="menuAccountant" runat="server">
+                            <a href="#">Accounting<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Share_Transaction_Entry.aspx">Share Transaction Entry</a>
+                                </li>
+                                <li>
+                                    <a href="Split_Entry_Form.aspx">Split Entry</a>
+                                </li>
+                                <li>
+                                    <a href="Bonus_Entry_Form.aspx">Bonus Entry</a>
+                                </li>
+                                <li>
+                                    <a href="Dividend_Entry.aspx">Dividend Entry</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li id="menuClerk" runat="server">
+                            <a href="#">Data Entry(Clerk)<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="Shareholder_Information_Form.aspx">Shareholder Data</a>
+                                </li>
+                                <li>
+                                    <a href="Company_Information_Form.aspx">Company Data</a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li id="menuAdmin" runat="server">
+                            <a href="#">Administration<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="User_Information_Form.aspx">Add User</a>
+                                </li>
+                                
+                                <li>
+                                    <a href="Dashboard_News.aspx">Add News to Dashboard</a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+
+                </div>
+
+            </nav>
+            <!-- /. NAV SIDE  -->
+            <div id="page-wrapper">
+                <div id="page-inner">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                    <!-- /. ROW  -->
+                    <hr />
+                    <asp:ContentPlaceHolder ID="PageContents" runat="server"></asp:ContentPlaceHolder>
+
+                </div>
+                <!-- /. PAGE INNER  -->
+            </div>
+            <!-- /. PAGE WRAPPER  -->
+        </div>
+        <!-- /. WRAPPER  -->
+        <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+        <!-- JQUERY SCRIPTS -->
+        <%--<script src="Assets_After_Login/js/jquery-1.10.2.js"></script>--%>
+
+        <!-- BOOTSTRAP SCRIPTS -->
+        <%--<script src="Assets_After_Login/js/bootstrap.min.js"></script>--%>
+        <script src="Scripts/bootstrap.js"></script>
+
+        <!-- METISMENU SCRIPTS -->
+        <%--<script src="Assets_After_Login/js/jquery.metisMenu.js"></script>--%>
+        <script src="Scripts/metisMenu.js"></script>
+        <!-- CUSTOM SCRIPTS -->
+        <script src="Assets_After_Login/js/custom.js"></script>
+
+    </form>
+    <div id="footer" style="background-color: #000; color: #fff; padding: 20px 50px 20px 50px; text-align: right;">
+        2015 Stocker!!! | All Right Reserved
+            <br />
+        &copy;Copyright by PARTH DESAI, SIDDHARTH KOTECHA , SHAZIN SAIYED & RIDDHI PATEL 
+    </div>
+
+</body>
+
+</html>

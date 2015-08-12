@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet_Shareholder_Statement" targetNamespace="http://tempuri.org/DataSet_Shareholder_Statement.xsd" xmlns:mstns="http://tempuri.org/DataSet_Shareholder_Statement.xsd" xmlns="http://tempuri.org/DataSet_Shareholder_Statement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="ConnString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnString (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.ConnString.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="view_Shareholder_StatementTableAdapter" GeneratorDataComponentClassName="view_Shareholder_StatementTableAdapter" Name="view_Shareholder_Statement" UserDataComponentName="view_Shareholder_StatementTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnString (Web.config)" DbObjectName="SMS.dbo.view_Shareholder_Statement" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT [Company Name], [Company ID], [Exchange Name], [Transaction ID], [Transaction Date], [Transaction Type], [Shareholder ID], [Buy Quantity], [Sell Quantity], [Transaction Price], [Shareholder Name], Buy_Sum, Sell_Sum FROM dbo.view_Shareholder_Statement</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Company Name" DataSetColumn="Company Name" />
+              <Mapping SourceColumn="Company ID" DataSetColumn="Company ID" />
+              <Mapping SourceColumn="Exchange Name" DataSetColumn="Exchange Name" />
+              <Mapping SourceColumn="Transaction ID" DataSetColumn="Transaction ID" />
+              <Mapping SourceColumn="Transaction Date" DataSetColumn="Transaction Date" />
+              <Mapping SourceColumn="Transaction Type" DataSetColumn="Transaction Type" />
+              <Mapping SourceColumn="Shareholder ID" DataSetColumn="Shareholder ID" />
+              <Mapping SourceColumn="Buy Quantity" DataSetColumn="Buy Quantity" />
+              <Mapping SourceColumn="Sell Quantity" DataSetColumn="Sell Quantity" />
+              <Mapping SourceColumn="Transaction Price" DataSetColumn="Transaction Price" />
+              <Mapping SourceColumn="Shareholder Name" DataSetColumn="Shareholder Name" />
+              <Mapping SourceColumn="Buy_Sum" DataSetColumn="Buy_Sum" />
+              <Mapping SourceColumn="Sell_Sum" DataSetColumn="Sell_Sum" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet_Shareholder_Statement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DataSet_Shareholder_Statement" msprop:Generator_UserDSName="DataSet_Shareholder_Statement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="view_Shareholder_Statement" msprop:Generator_TableClassName="view_Shareholder_StatementDataTable" msprop:Generator_TableVarName="tableview_Shareholder_Statement" msprop:Generator_TablePropName="view_Shareholder_Statement" msprop:Generator_RowDeletingName="view_Shareholder_StatementRowDeleting" msprop:Generator_RowChangingName="view_Shareholder_StatementRowChanging" msprop:Generator_RowEvHandlerName="view_Shareholder_StatementRowChangeEventHandler" msprop:Generator_RowDeletedName="view_Shareholder_StatementRowDeleted" msprop:Generator_UserTableName="view_Shareholder_Statement" msprop:Generator_RowChangedName="view_Shareholder_StatementRowChanged" msprop:Generator_RowEvArgName="view_Shareholder_StatementRowChangeEvent" msprop:Generator_RowClassName="view_Shareholder_StatementRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnCompany_Name" msprop:Generator_ColumnPropNameInRow="Company_Name" msprop:Generator_ColumnPropNameInTable="Company_NameColumn" msprop:Generator_UserColumnName="Company Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Company_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnCompany_ID" msprop:Generator_ColumnPropNameInRow="Company_ID" msprop:Generator_ColumnPropNameInTable="Company_IDColumn" msprop:Generator_UserColumnName="Company ID" type="xs:int" />
+              <xs:element name="Exchange_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnExchange_Name" msprop:Generator_ColumnPropNameInRow="Exchange_Name" msprop:Generator_ColumnPropNameInTable="Exchange_NameColumn" msprop:Generator_UserColumnName="Exchange Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transaction_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnTransaction_ID" msprop:Generator_ColumnPropNameInRow="Transaction_ID" msprop:Generator_ColumnPropNameInTable="Transaction_IDColumn" msprop:Generator_UserColumnName="Transaction ID" type="xs:int" />
+              <xs:element name="Transaction_x0020_Date" msprop:Generator_ColumnVarNameInTable="columnTransaction_Date" msprop:Generator_ColumnPropNameInRow="Transaction_Date" msprop:Generator_ColumnPropNameInTable="Transaction_DateColumn" msprop:Generator_UserColumnName="Transaction Date" type="xs:dateTime" />
+              <xs:element name="Transaction_x0020_Type" msprop:Generator_ColumnVarNameInTable="columnTransaction_Type" msprop:Generator_ColumnPropNameInRow="Transaction_Type" msprop:Generator_ColumnPropNameInTable="Transaction_TypeColumn" msprop:Generator_UserColumnName="Transaction Type">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Shareholder_x0020_ID" msprop:Generator_ColumnVarNameInTable="columnShareholder_ID" msprop:Generator_ColumnPropNameInRow="Shareholder_ID" msprop:Generator_ColumnPropNameInTable="Shareholder_IDColumn" msprop:Generator_UserColumnName="Shareholder ID" type="xs:int" />
+              <xs:element name="Buy_x0020_Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBuy_Quantity" msprop:Generator_ColumnPropNameInRow="Buy_Quantity" msprop:Generator_ColumnPropNameInTable="Buy_QuantityColumn" msprop:Generator_UserColumnName="Buy Quantity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sell_x0020_Quantity" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnSell_Quantity" msprop:Generator_ColumnPropNameInRow="Sell_Quantity" msprop:Generator_ColumnPropNameInTable="Sell_QuantityColumn" msprop:Generator_UserColumnName="Sell Quantity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Transaction_x0020_Price" msprop:Generator_ColumnVarNameInTable="columnTransaction_Price" msprop:Generator_ColumnPropNameInRow="Transaction_Price" msprop:Generator_ColumnPropNameInTable="Transaction_PriceColumn" msprop:Generator_UserColumnName="Transaction Price" type="xs:double" />
+              <xs:element name="Shareholder_x0020_Name" msprop:Generator_ColumnVarNameInTable="columnShareholder_Name" msprop:Generator_ColumnPropNameInRow="Shareholder_Name" msprop:Generator_ColumnPropNameInTable="Shareholder_NameColumn" msprop:Generator_UserColumnName="Shareholder Name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Buy_Sum" msprop:Generator_ColumnVarNameInTable="columnBuy_Sum" msprop:Generator_ColumnPropNameInRow="Buy_Sum" msprop:Generator_ColumnPropNameInTable="Buy_SumColumn" msprop:Generator_UserColumnName="Buy_Sum" type="xs:long" minOccurs="0" />
+              <xs:element name="Sell_Sum" msprop:Generator_ColumnVarNameInTable="columnSell_Sum" msprop:Generator_ColumnPropNameInRow="Sell_Sum" msprop:Generator_ColumnPropNameInTable="Sell_SumColumn" msprop:Generator_UserColumnName="Sell_Sum" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:view_Shareholder_Statement" />
+      <xs:field xpath="mstns:Company_x0020_ID" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
